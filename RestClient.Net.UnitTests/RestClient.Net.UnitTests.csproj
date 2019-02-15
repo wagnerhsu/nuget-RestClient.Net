@@ -6,6 +6,10 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="..\RestClient.Net.Samples\RestClient.Net.Samples\Model\Atlassian.cs" Link="Model\Atlassian.cs" />
     <Compile Include="..\RestClient.Net.Samples\RestClient.Net.Samples\Model\CountryCodeData.cs" Link="Model\CountryCodeData.cs" />
@@ -19,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DalSoft.RestClient" Version="3.3.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />

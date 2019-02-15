@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RestClientDotNet
 {
-    public class RestClient
+    public class RestClient : IDisposable
     {
         #region Fields
         private readonly HttpClient _HttpClient = new HttpClient();
@@ -20,7 +20,7 @@ namespace RestClientDotNet
         public Dictionary<string, string> Headers { get; private set; } = new Dictionary<string, string>();
         public AuthenticationHeaderValue Authorization { get; set; }
         public Dictionary<HttpStatusCode, Func<byte[], object>> HttpStatusCodeFuncs = new Dictionary<HttpStatusCode, Func<byte[], object>>();
-        public IZip Zip;
+        public IZip Zip { get; set; }
         public ISerializationAdapter SerializationAdapter { get; }
         #endregion
 
@@ -181,6 +181,11 @@ namespace RestClientDotNet
         public async Task<TReturn> PatchAsync<TReturn, TBody>(TBody body, string queryString, string contentType = "application/json")
         {
             return await Call<TReturn>(queryString, HttpVerb.Patch, contentType, body);
+        }
+
+        public void Dispose()
+        {
+            _HttpClient.Dispose();
         }
         #endregion
     }

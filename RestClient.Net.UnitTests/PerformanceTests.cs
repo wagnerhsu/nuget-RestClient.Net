@@ -27,8 +27,9 @@ namespace RestClient.Net.UnitTests
             Console.WriteLine($"RestClient Get : Total Milliseconds:{ restClientTotalMilliseconds}");
 
 
-            startTime = DateTime.Now;
             var restSharpClient = new RestSharp.RestClient("http://services.groupkt.com");
+
+            startTime = DateTime.Now;
 
             var request = new RestRequest(Method.GET)
             {
@@ -45,9 +46,32 @@ namespace RestClient.Net.UnitTests
             var restSharpTotalMilliseconds = (DateTime.Now - startTime).TotalMilliseconds;
             Console.WriteLine($"RestSharp Get : Total Milliseconds:{ restSharpTotalMilliseconds}");
 
+
+            dynamic dalSoftClient = new DalSoft.RestClient.RestClient("https://jsonplaceholder.typicode.com");
+
+            startTime = DateTime.Now;
+
+            object countryDatas;
+
+            for (var i = 0; i < 15; i++)
+                countryDatas = await dalSoftClient.Get<groupktResult<CountriesResult>>();
+
+            var dalSoftRestClientTotalMilliseconds = (DateTime.Now - startTime).TotalMilliseconds;
+
+            Console.WriteLine($"DalSoft RestClient Get : Total Milliseconds:{ restClientTotalMilliseconds}");
+
             Assert.IsTrue(restClientTotalMilliseconds < restSharpTotalMilliseconds, "😞 RestSharp wins.");
 
-            Console.WriteLine("🏆 RestClient Wins!!!");
+            Assert.IsTrue(restClientTotalMilliseconds <= dalSoftRestClientTotalMilliseconds, "😞 DalSoft wins.");
+
+            if (restClientTotalMilliseconds == dalSoftRestClientTotalMilliseconds)
+            {
+                Console.WriteLine("🤷 RestClient.Net and DalSoft are the same");
+            }
+            else
+            {
+                Console.WriteLine("🏆 RestClient Wins!!!");
+            }
         }
 
         [TestMethod]

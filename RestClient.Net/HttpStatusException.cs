@@ -13,5 +13,17 @@ namespace RestClientDotNet
             StatusCode = statusCode;
             ErrorData = errorData;
         }
+
+        public HttpStatusException()
+        {
+        }
+
+        public HttpStatusException(string message) : base(message)
+        {
+        }
+
+        public HttpStatusException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
     }
 }
