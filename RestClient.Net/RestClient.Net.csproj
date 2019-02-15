@@ -11,7 +11,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <DelaySign>false</DelaySign>
     <Authors>Christian Findlay</Authors>
-    <NoWarn>1701;1702;CA1063;Ca1816</NoWarn>
+    <NoWarn>1701;1702;CA1063;CA1816;CA2007</NoWarn>
     <Description>Cross Platform REST Client for all C# platforms
 
 Samples and Info: https://github.com/MelbourneDeveloper/RestClient.Net
