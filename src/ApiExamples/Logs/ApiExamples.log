@@ -1,0 +1,89 @@
+2021-08-15 19:59:57.607 +08:00 [INF] Now listening on: https://localhost:5001
+2021-08-15 19:59:57.611 +08:00 [INF] Now listening on: http://localhost:5000
+2021-08-15 19:59:57.611 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-15 19:59:57.611 +08:00 [INF] Hosting environment: Development
+2021-08-15 19:59:57.611 +08:00 [INF] Content root path: E:\WagnerGithub\NuGet\nuget-RestClient.Net\src\ApiExamples
+2021-08-15 20:00:00.128 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2021-08-15 20:00:00.374 +08:00 [INF] Request finished in 250.4967ms 404 
+2021-08-15 20:03:25.306 +08:00 [INF] Application is shutting down...
+2021-08-15 20:07:13.334 +08:00 [INF] Now listening on: https://localhost:5001
+2021-08-15 20:07:13.340 +08:00 [INF] Now listening on: http://localhost:5000
+2021-08-15 20:07:13.340 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-15 20:07:13.340 +08:00 [INF] Hosting environment: Development
+2021-08-15 20:07:13.340 +08:00 [INF] Content root path: E:\WagnerGithub\NuGet\nuget-RestClient.Net\src\ApiExamples
+2021-08-15 20:07:15.795 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger  
+2021-08-15 20:07:17.044 +08:00 [INF] Request finished in 1256.0933ms 301 
+2021-08-15 20:07:17.995 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html  
+2021-08-15 20:07:18.202 +08:00 [INF] Request finished in 207.3558ms 200 text/html;charset=utf-8
+2021-08-15 20:07:18.742 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css  
+2021-08-15 20:07:18.761 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js  
+2021-08-15 20:07:18.764 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js  
+2021-08-15 20:07:18.773 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js  
+2021-08-15 20:07:18.865 +08:00 [INF] Request finished in 91.9135ms 200 application/javascript; charset=utf-8
+2021-08-15 20:07:19.376 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-08-15 20:07:19.435 +08:00 [INF] Request finished in 696.4815ms 200 text/css
+2021-08-15 20:07:19.444 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-08-15 20:07:19.444 +08:00 [INF] Request finished in 680.5985ms 200 application/javascript
+2021-08-15 20:07:19.467 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-08-15 20:07:19.468 +08:00 [INF] Request finished in 706.6432ms 200 application/javascript
+2021-08-15 20:07:21.662 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json  
+2021-08-15 20:07:22.023 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - ApiExamples.Controllers.ExceptionController.Error (ApiExamples). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-08-15 20:07:22.064 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png  
+2021-08-15 20:07:22.068 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-08-15 20:07:22.071 +08:00 [INF] Request finished in 4.904ms 200 image/png
+2021-08-15 20:07:22.195 +08:00 [INF] Executing endpoint 'ApiExamples.Controllers.ExceptionController.Error (ApiExamples)'
+2021-08-15 20:07:22.346 +08:00 [INF] Route matched with {action = "Error", controller = "Exception"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller ApiExamples.Controllers.ExceptionController (ApiExamples).
+2021-08-15 20:07:23.503 +08:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-15 20:07:23.529 +08:00 [INF] Executed action ApiExamples.Controllers.ExceptionController.Error (ApiExamples) in 1165.5373ms
+2021-08-15 20:07:23.529 +08:00 [INF] Executed endpoint 'ApiExamples.Controllers.ExceptionController.Error (ApiExamples)'
+2021-08-15 20:07:23.530 +08:00 [INF] Request finished in 1867.9334ms 500 application/problem+json; charset=utf-8
+2021-08-15 20:07:40.057 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html  
+2021-08-15 20:07:40.063 +08:00 [INF] Request finished in 5.7841ms 200 text/html;charset=utf-8
+2021-08-15 20:07:40.197 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js  
+2021-08-15 20:07:40.210 +08:00 [INF] Request finished in 12.9733ms 200 application/javascript; charset=utf-8
+2021-08-15 20:07:40.710 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json  
+2021-08-15 20:07:40.715 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - ApiExamples.Controllers.ExceptionController.Error (ApiExamples). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-08-15 20:07:40.719 +08:00 [INF] Executing endpoint 'ApiExamples.Controllers.ExceptionController.Error (ApiExamples)'
+2021-08-15 20:07:40.721 +08:00 [INF] Route matched with {action = "Error", controller = "Exception"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller ApiExamples.Controllers.ExceptionController (ApiExamples).
+2021-08-15 20:07:40.724 +08:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-15 20:07:40.726 +08:00 [INF] Executed action ApiExamples.Controllers.ExceptionController.Error (ApiExamples) in 4.2315ms
+2021-08-15 20:07:40.726 +08:00 [INF] Executed endpoint 'ApiExamples.Controllers.ExceptionController.Error (ApiExamples)'
+2021-08-15 20:07:40.727 +08:00 [INF] Request finished in 17.0787ms 500 application/problem+json; charset=utf-8
+2021-08-15 20:07:40.758 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png  
+2021-08-15 20:07:40.759 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-08-15 20:07:40.759 +08:00 [INF] Request finished in 2.5028ms 200 image/png
+2021-08-15 20:08:44.179 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger.json  
+2021-08-15 20:08:44.185 +08:00 [INF] Request finished in 4.973ms 404 
+2021-08-15 20:08:52.379 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json  
+2021-08-15 20:08:52.384 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - ApiExamples.Controllers.ExceptionController.Error (ApiExamples). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.<Invoke>g__Awaited|6_0(ExceptionHandlerMiddleware middleware, HttpContext context, Task task)
+2021-08-15 20:08:52.386 +08:00 [INF] Executing endpoint 'ApiExamples.Controllers.ExceptionController.Error (ApiExamples)'
+2021-08-15 20:08:52.386 +08:00 [INF] Route matched with {action = "Error", controller = "Exception"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Error() on controller ApiExamples.Controllers.ExceptionController (ApiExamples).
+2021-08-15 20:08:52.388 +08:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-08-15 20:08:52.390 +08:00 [INF] Executed action ApiExamples.Controllers.ExceptionController.Error (ApiExamples) in 3.8914ms
+2021-08-15 20:08:52.391 +08:00 [INF] Executed endpoint 'ApiExamples.Controllers.ExceptionController.Error (ApiExamples)'
+2021-08-15 20:08:52.391 +08:00 [INF] Request finished in 12.7142ms 500 application/problem+json; charset=utf-8
+2021-08-15 20:08:52.838 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2021-08-15 20:08:52.842 +08:00 [INF] Request finished in 4.9818ms 404 
+2021-08-15 20:10:32.425 +08:00 [INF] Now listening on: https://localhost:5001
+2021-08-15 20:10:32.434 +08:00 [INF] Now listening on: http://localhost:5000
+2021-08-15 20:10:32.435 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-08-15 20:10:32.435 +08:00 [INF] Hosting environment: Development
+2021-08-15 20:10:32.435 +08:00 [INF] Content root path: E:\WagnerGithub\NuGet\nuget-RestClient.Net\src\ApiExamples

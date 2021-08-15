@@ -800,3 +800,4 @@ dotnet_diagnostic.CA1816.severity = error
 
 # CA1063: Implement IDisposable Correctly
 dotnet_diagnostic.CA1063.severity = error
+dotnet_diagnostic.IDE0130.severity=suggestion
